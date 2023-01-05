@@ -4,6 +4,9 @@
         --color-white: #ffffff;
         --color-footer: #E7E9FC;
         --color-hover: #404BBF;
+        --color-logo-web: #4D5AE5;
+        --team-background-color: #F4F4FD;
+
 }
 
 body {
@@ -11,22 +14,9 @@ body {
         color: var(--body-color);
 }
 
-a:hover,
-a:focus {
-        color: var(--color-hover)
-}
-
-button:hover,
-button:focus {
-        color: var(--color-hover);
-}
-
-.button {
-        cursor: pointer;
-}
 
 .logo-web {
-        color: #4D5AE5;
+        color: var(--color-logo-web);
         font-family: 'Raleway';
         font-weight: 800;
         font-size: 18px;
@@ -37,7 +27,7 @@ button:focus {
 }
 
 .logo {
-        color: #2E2F42;
+        color: var(--primary-header-color);
         font-family: 'Raleway';
         font-weight: 800;
         font-size: 18px;
@@ -52,10 +42,10 @@ button:focus {
 
 /*header*/
 .link-nav {
-        color: #2E2F42;
-        font-family: 'Roboto';
+        color: var(--primary-header-color);
+        font-family: inherit;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
@@ -63,14 +53,26 @@ button:focus {
         list-style: none;
 }
 
+.link-nav:hover,
+.link-nav:focus {
+        color: var(--color-hover)
+}
+
 
 .link-address {
         color: var(--body-color);
-        font-family: 'Roboto';
+        font-family: inherit;
         font-style: normal;
         font-size: 16px;
         line-height: 1.5px;
         letter-spacing: 0.02em;
+        text-decoration: none;
+        list-style: none;
+}
+
+.link-address:hover,
+.link-address:focus {
+        color: var(--color-hover)
 }
 
 /*hero*/
@@ -79,9 +81,9 @@ button:focus {
 }
 
 .hero-title {
-        background-color: #2E2F42;
+        background-color: var(--primary-header-color);
         color: var(--color-white);
-        font-weight: 600;
+        font-weight: 700;
         font-size: 56px;
         line-height: 1.07;
         text-align: center;
@@ -89,19 +91,25 @@ button:focus {
 }
 
 .hero-button {
-        background-color: #4D5AE5;
+        background-color: var(--color-logo-web);
         color: var(--color-white);
-        font-weight: 600;
+        font-family: inherit;
+        font-weight: 500;
         font-size: 16px;
         line-height: 1.18;
         align-items: center;
         letter-spacing: 0.04em;
 }
 
+.hero-button:hover,
+.hero-button:focus {
+        background-color: var(--color-hover);
+}
+
 /*section quality*/
 .quality-title {
         color: var(--primary-header-color);
-        font-weight: 600;
+        font-weight: 700;
         font-size: 20px;
         line-height: 1.2;
         letter-spacing: 0.02em;
@@ -115,7 +123,7 @@ button:focus {
 
 .subtitle {
         color: var(--primary-header-color);
-        font-weight: 600;
+        font-weight: 500;
         font-size: 36px;
         line-height: 1.11;
         text-align: center;
@@ -125,13 +133,13 @@ button:focus {
 
 /*section-oer team*/
 .section-team {
-        background-color: #F4F4FD;
+        background-color: var(--team-background-color);
 }
 
 .team-title {
-        background-color: #F4F4FD;
+        background-color: var(--team-background-color);
         color: var(--primary-header-color);
-        font-weight: 600;
+        font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
         text-align: center;
@@ -141,7 +149,7 @@ button:focus {
 
 .team-subtitle {
         color: var(--primary-header-color);
-        font-weight: 600;
+        font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
         text-align: center;
@@ -161,7 +169,7 @@ button:focus {
 }
 
 .logo-web-footer {
-        color: #4D5AE5;
+        color: var(--color-logo-web);
         font-family: 'Raleway';
         font-weight: 800;
         font-size: 18px;
@@ -172,7 +180,7 @@ button:focus {
 }
 
 .logo-footer {
-        color: #F4F4FD;
+        color: var(--team-background-color);
         font-family: 'Raleway';
         font-weight: 800;
         font-size: 18px;
@@ -184,35 +192,35 @@ button:focus {
 }
 
 .text-footer {
-        color: #E7E9FC;
+        color: var(--color-footer);
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
 }
 
 /*portfolio*/
-.button-portfolio-app {
-        background-color: #4D5AE5;
-        ;
-        color: var(--color-white);
-        font-weight: 600;
+.button-portfolio {
+        background-color: var(--team-background-color);
+        color: var(--color-logo-web);
+        font-family: inherit;
+        font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.04em;
+        cursor: pointer
 }
 
-.button-portfolio {
-        background-color: #F4F4FD;
-        color: #4D5AE5;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.04em;
+.button-portfolio:hover,
+.button-portfolio:focus {
+        background-color: var(--color-logo-web);
+        color: var(--team-background-color);
 }
+
+
 
 .subtitle-portfolio {
         color: var(--primary-header-color);
-        font-weight: 600;
+        font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
         letter-spacing: 0.02em;
